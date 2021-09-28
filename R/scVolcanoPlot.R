@@ -17,7 +17,15 @@
 #'
 #' @author Wei Zhang
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' scVolcanoPlot(object = H3N2_small,
+#'   key = "Infected_vs_Bystander",
+#'   cluster = "0",
+#'   top_n = 5
+#' )
+#'
 scVolcanoPlot <- function(object = NULL, key = NULL, cluster = NULL, 
                           padj = 0.05, logFC = 0.585, cols = NULL, 
                           pt.size = NULL, species.by = NULL, top_n = NULL,

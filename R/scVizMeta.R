@@ -15,7 +15,24 @@
 #'
 #' @author Wei Zhang
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' scVizMeta(object = H3N2_small,
+#'   reduction = "umap",
+#'   signature = "H3N2",
+#'   split.by = "sample",
+#'   pt.size = 1,
+#'   interval = c(
+#'     Abundant = 1000, 
+#'     Large = 500, 
+#'     Medium = 100, 
+#'     Small = 10, 
+#'     Single = 1, 
+#'     None = 0
+#'   )
+#' )
+#'
 scVizMeta <- function(object = NULL, signature = NULL, pt.size = NULL, 
                       reduction = NULL, title = NULL, split.by = NULL, 
                       ncol = NULL, raster = TRUE, palette = "YlOrRd",

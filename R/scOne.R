@@ -10,7 +10,16 @@
 #'
 #' @author Wei Zhang
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' x <- scOne(object = H3N2_small, 
+#'   nFeatures = 2000,
+#'   nPC = 30,
+#'   resolution = 0.7
+#' )
+#' scDimPlot(x)
+#'
 scOne <- function(object = NULL, nFeatures = 2000, nPC = 30, resolution = 0.5, 
                   perplexity = NULL) {
   object <- Seurat::NormalizeData(object, normalization.method = "LogNormalize",

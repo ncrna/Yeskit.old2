@@ -7,6 +7,16 @@
 #'
 #' @author Wei Zhang
 #' @export
+#'
+#' @examples
+#' data("H3N2_small")
+#' x <- scPathogenDGE(object = H3N2_small, 
+#'   species.by = "H3N2",
+#'   min.cells = 5,
+#'   clusters = NULL
+#' )
+#' head(x)
+#'
 scPathogenDGE <- function(object = NULL, species.by = NULL, 
                           clusters = NULL, min.cells = 20) {
   if (is.null(object)) {

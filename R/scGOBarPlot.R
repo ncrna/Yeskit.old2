@@ -9,9 +9,18 @@
 #' @param extra Extra slot used to fetch GOs
 #' @return A ggplot object
 #'
-#' @author rstatistics
+#' @author Wei Zhang
 #' @export
-
+#'
+#' @examples
+#' scGOBarPlot(object = H3N2_small,
+#'   key = "Infected_vs_Bystander.GO",
+#'   ont = "BP",
+#'   top_n = 6,
+#'   direction = "up",
+#'   cluster = "0"
+#' )
+#'
 
 scGOBarPlot <- function(object = NULL, key = NULL, cluster = NULL, 
                         direction = "up", ont = "BP", top_n = 20, 

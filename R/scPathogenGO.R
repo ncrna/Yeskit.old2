@@ -13,7 +13,19 @@
 #'
 #' @author Wei Zhang
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' require(topGO)
+#' x <- scPathogenGO(object = H3N2_small,
+#'   key = "H3N2", 
+#'   species = "H3N2",
+#'   logFC = 0.25,
+#'   only.pos = FALSE,
+#'   reference = "human"
+#' )
+#' head(x)
+#'
 scPathogenGO <- function(object = NULL, key = NULL, species = NULL, 
                          clusters = NULL, logFC = 0.25, only.pos = TRUE, 
                          reference = "human") {

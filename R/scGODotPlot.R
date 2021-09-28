@@ -14,8 +14,21 @@
 #' @param top_n Only top_n entries to plot
 #' @param extra Extra slot used to fetch GOs
 #' @return A ggplot object
+#'
 #' @author Wei Zhang
 #' @export
+#'
+#' @examples
+#' scGODotPlot(object = H3N2_small,
+#'   key = "Infected_vs_Bystander.GO",
+#'   ont = "BP",
+#'   top_n = 6,
+#'   direction = "up",
+#'   cluster = "0",
+#'   font.size = 8
+#' )
+#'
+
 
 scGODotPlot <- function(object = NULL, key = NULL, clusters = NULL, 
                         direction = "up", ont = "BP", padj.cutoff = 0.01, 

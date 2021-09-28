@@ -14,6 +14,13 @@
 #' @author Wei Zhang
 #' @export
 #'
+#' @examples
+#' scDensityPlot(object = H3N2_small,
+#'   reduction = "umap",
+#'   split.by = "sample",
+#'   ncol = 2
+#' )
+#'
 scDensityPlot <- function(object = NULL, reduction = NULL, title = NULL, 
                           split.by = NULL, ncol = NULL, colors = NULL, 
                           digits = NULL) {

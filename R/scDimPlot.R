@@ -12,7 +12,17 @@
 #' @param raster Convert points to raster format, default is TRUE
 #' @return A ggplot object
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' scDimPlot(object = H3N2_small,
+#'   reduction = "umap",
+#'   cols = NULL,
+#'   split.by = "sample",
+#'   ncol = 2,
+#'   pt.size = 1
+#' )
+#'
 scDimPlot <- function(object = NULL, cols = NULL, pt.size = NULL, 
                       reduction = NULL, split.by = NULL, label = TRUE, 
                       title = NULL, ncol = NULL, raster = TRUE) {

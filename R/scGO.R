@@ -13,7 +13,18 @@
 #'
 #' @author rstatistics
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' require(topGO)
+#' x <- scGO(object = H3N2_small,
+#'   key = "Infected_vs_Bystander", 
+#'   logFC = 0.25,
+#'   only.pos = FALSE,
+#'   reference = "human"
+#' )
+#' head(x)
+#'
 scGO <- function(object = NULL, key = NULL, clusters = NULL, logFC = 0.25, 
                  only.pos = TRUE, reference = "human", extra = NULL) {
   cluster <- avg_log2FC <- p_val_adj <- NULL

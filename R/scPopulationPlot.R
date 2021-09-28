@@ -11,7 +11,15 @@
 #'
 #' @author rstatistics
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' scPopulationPlot(object = H3N2_small,
+#'   by = "sample",
+#'   cols = NULL,
+#'   order = c("Bystander", "Infected")
+#' )
+#'
 scPopulationPlot <- function(object = NULL, by = c("sample", "cluster"), 
                              order = NULL, cols = NULL) {
   if (is.null(by)) by = "sample"

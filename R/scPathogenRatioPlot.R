@@ -10,7 +10,15 @@
 #'
 #' @author Wei Zhang
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' scPathogenRatioPlot(object = H3N2_small,
+#'   species = "H3N2",
+#'   split.by = "sample",
+#'   ncol = 2
+#' )
+#'
 scPathogenRatioPlot <- function(object = NULL, species = NULL, cols = NULL, 
                                 split.by = NULL, ncol = NULL) {
   options(scipen = 5)

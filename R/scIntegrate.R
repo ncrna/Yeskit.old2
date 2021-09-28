@@ -22,8 +22,19 @@
 #'   Default batch.rm='harmony'
 #' @return Seurat object.
 
-#' @author rstatistics
+#' @author Wei Zhang
 #' @export
+#'
+#' @examples
+#' \dontrun{
+#' data("H3N2_small")
+#' x <- scIntegrate(object.list = list(Bystander, Infected), 
+#'   object.names = c("Bystander", "Infected"),
+#'   batch.rm = "harmony",
+#'   resolution = 0.7
+#' )    
+#' }
+#'
 
 scIntegrate <- function(object.list = NULL, object.names = NULL, 
                         nVariable = 2000, nPC = 30, res = 0.5, 

@@ -29,11 +29,21 @@
 #' @param meta_features Features used to store in the meta.data slot
 #' @return A Seurat object.
 #'
-#' @import Seurat
-
 #' @author Wei Zhang
 #' @export
-
+#'
+#' @examples
+#' x <- scRead(sample_name = "Infected", 
+#'   data_dir = system.file("extdata/H3N2_10X_matrix/Infected/",
+#'                          package="Yeskit"), 
+#'   gene_column = 2, 
+#'   project_name = "H3N2", 
+#'   group_name = "Infected",
+#'   meta_file = system.file("extdata/H3N2_10X_matrix/Infected/microbes.tsv",
+#'                           package="Yeskit"),
+#' )    
+#' x
+#'
 scRead <- function(sample_name = NULL, data_dir = NULL, gene_column = 2, 
                    min_cells = 5, min_features = 200, 
                    min_rnas = 1000, percent_mito = 20, 

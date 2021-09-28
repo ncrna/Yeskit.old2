@@ -16,7 +16,18 @@
 #'   (larger values will be set to this)
 #' @return A ggplot object
 #' @export
-
+#'
+#' @examples
+#' data("H3N2_small")
+#' scScoreDimPlot(object = H3N2_small,
+#'   signature = "HALLMARK_INFLAMMATORY_RESPONSE",
+#'   reduction = "umap",
+#'   cols = NULL,
+#'   split.by = "sample",
+#'   ncol = 2,
+#'   pt.size = 1 
+#' )
+#'
 scScoreDimPlot <- function(object = NULL, signature = NULL, reduction = NULL, 
                            cols = NULL, pt.size = NULL, split.by = NULL, 
                            title = NULL, ncol = NULL, raster = TRUE, 
